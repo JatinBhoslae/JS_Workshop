@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="myform" onsubmit="return validate()">
+      <input type="text" id="name" placeholder="Enter your name " /><br />
+      <input type="submit" value="submit" />
+    </form>
+    <script>
+      function validate() {
+        let x = document.getElementById("name").value;
+        if (x == "") {
+          alert("Name can not be empty");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

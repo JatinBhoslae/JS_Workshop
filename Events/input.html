@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: black;
+    }
+
+    .output {
+      background-color: gray;
+      width: 325px;
+      height: 230px;
+      border-radius: 5px;
+      border-left: 5px solid white;
+      margin: auto;
+      margin-top: 50px;
+    }
+    .output p {
+      margin: 5px 0;
+      font-size: 18px;
+      color: goldenrod;
+      /* line-height: 30px; */
+      padding-top: 25px;
+      margin-left: 20px;
+    }
+
+    input {
+      padding: 8px;
+      width: 300px;
+      font-size: 16px;
+      border: 5px double goldenrod;
+      border-radius: 10px;
+      text-align: center;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 170px;
+    }
+  </style>
+  <body>
+    <section>
+      <input type="text" id="myInput" placeholder="Type something..."  name="username"/>
+      <div class="output">
+        <p id="keyPressed">Input Value :</p>
+        <p id="keyCode">Input Name :</p>
+        <p id="charCode">Input Type :</p>
+        <p id="eventType">Event Type :</p>
+      </div>
+    </section>
+
+    <script>
+      // Function to handle keypress events
+      const handleinput = (event) => {
+        console.log(event);
+        console.log("Input Value :", event.target.value);
+        console.log("Input Name :", event.target.name);
+        console.log("Input Type :", event.inputType);
+        console.log("Event Type :", event.type);
+
+        document.getElementById(
+          "keyPressed"
+        ).textContent = `Input Value : ${event.target.value}`;
+        document.getElementById(
+          "keyCode"
+        ).textContent = `Input Name : ${event.target.name}`;
+        document.getElementById(
+          "charCode"
+        ).textContent = `Input Type : ${event.inputType}`;
+        document.getElementById(
+          "eventType"
+        ).textContent = `Event Type : ${event.type}`;
+      };
+
+      //   Get input element
+      let myInput = document.getElementById("myInput");
+
+      // Add event listner
+      myInput.addEventListener("input", handleinput);
+    //   myInput.addEventListener("change", handleinput);
+    </script>
+  </body>
+</html>

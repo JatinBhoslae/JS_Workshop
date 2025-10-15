@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: pink;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        margin-left: 20px;
+        color: #333;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: aqua;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        margin-left: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #00ced1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline Events -->
+    <h1>Inline Events</h1>
+    <button onclick="alert('Welcome to js Workshop')">Welcome</button>
+    <button onmouseover="alert('Welcome to js Workshop')">Welcome</button>
+    <button ondblclick="alert('Welcome to js Workshop')">Welcome Again</button>
+
+    <!-- DOM Events Handler -->
+    <h1>DOM event handler</h1>
+    <button id="mybtn1">Welcome</button>
+    <button id="mybtn2">Welcome</button>
+    <button id="mybtn3">Welcome Again</button>
+
+    <!-- addEventsListener Events Handler  -->
+    <h1>ADDEventsListener Events Handler</h1>
+    <button id="mybtn4">Welcome</button>
+    <button id="mybtn5">Welcome</button>
+    <button id="mybtn6">Welcome Again</button>
+
+    <script>
+      // DOM Events Handler
+      document.getElementById("mybtn1").onclick = function () {
+        alert("Welcome to js workshop");
+      };
+      document.getElementById("mybtn2").onmouseover = function () {
+        alert("Welcome to js workshop");
+      };
+      document.getElementById("mybtn3").ondblclick = function () {
+        alert("Welcome to js workshop");
+      };
+
+      //   addEventsListener Events Handler
+      document.getElementById("mybtn4").addEventListener("click", function () {
+        alert("Welcome to js workshop");
+      });
+      document
+        .getElementById("mybtn5")
+        .addEventListener("mouseover", function () {
+          alert("Welcome to js workshop");
+        });
+      document
+        .getElementById("mybtn6")
+        .addEventListener("dblclick", function () {
+          alert("Welcome to js workshop");
+        });
+    </script>
+  </body>
+</html>
