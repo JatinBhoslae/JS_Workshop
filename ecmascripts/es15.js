@@ -201,7 +201,7 @@
 // Destructuring is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. That is, we can extract data from arrays and objects and assign them to variables.
 
 //? 1: Extracting specific elements:
-const numbers = [10, 20, 30];
+// const numbers = [10, 20, 30];
 // const first = numbers[0]; // Traditional way
 // const [first, second, third] = numbers;
 // console.log(second);
@@ -212,8 +212,8 @@ const numbers = [10, 20, 30];
 
 //! Interview Questions
 //! Write a program to swap two variables without using 3rd variable?
-let a = 10;
-let b = 30;
+// let a = 10;
+// let b = 30;
 // a=30, b=10
 //? Mostly will do using 3rd var
 // let c = b; //c=30
@@ -281,13 +281,14 @@ let b = 30;
 // };
 
 //? with rest parameters
-const sum = (a, b, ...numbers) => {
-  //   console.log(typeof numbers);
-  return numbers.reduce((accum, curVal) => (accum = accum + curVal), 0);
-};
+// const sum = (...numbers) => {
+//   //   console.log(typeof numbers);
+//   return numbers.reduce((accum, curVal) => (accum = accum + curVal), 0);
+// };
 
-console.log(sum(1, 2, 3, 4));
+// console.log(sum(1, 2, 3, 4));
 
 //TODO NOTE: A function definition can only have one rest parameter, and the rest parameter must be the last parameter in the function definition.
 // function wrong1(...one, ...wrong) {}         // first one take all values then no values remain for wrong 
 // function wrong2(...wrong, arg2, arg3) {}     // Simliarly wrong takes all values then no values remain for arg2 and arg3
+// function wrong2(arg2, arg3, ...wrong) {}     // arg2 and arg3 take first and second values and remaining values take wrong
